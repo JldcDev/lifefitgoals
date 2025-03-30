@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import ExerciseCard from '@/components/ExerciseCard';
 
 const exercises = [
   {
@@ -6,21 +7,21 @@ const exercises = [
     name: 'Push-Up',
     bodyPart: 'Pecho',
     type: 'Calistenia',
-    image: '../public/images/pushup.png',
+    image: '/images/pushup.png',
   },
   {
     id: 'squat',
     name: 'Sentadilla',
     bodyPart: 'Piernas',
     type: 'Peso corporal',
-    image: '../public/images/squat.png',
+    image: '/images/squat.png',
   },
   {
     id: 'plank',
     name: 'Plancha',
     bodyPart: 'Core',
     type: 'Isométrico',
-    image: '../public/images/plank.png',
+    image: '/images/plank.png',
   },
 ];
 
@@ -81,23 +82,15 @@ export default function ExerciseSearch() {
         {/* 💪 Resultados */}
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 justify-items-center">
           {filteredExercises.map((exercise) => (
-            <div
-              key={exercise.id}
-              className="bg-gray-50 rounded-xl overflow-hidden shadow hover:shadow-lg transition w-[420px]"
-            >
-              <div className="overflow-hidden">
-                <img
-                  src={exercise.image}
-                  alt={exercise.name}
-                  className="h-64 w-full object-cover transform transition-transform duration-300 hover:scale-105"
-                />
-              </div>
-              <div className="p-6">
-                <h2 className="text-xl font-semibold text-gray-800">{exercise.name}</h2>
-                <p className="text-sm text-gray-600 mt-1">Grupo: {exercise.bodyPart}</p>
-                <p className="text-sm text-gray-600">Tipo: {exercise.type}</p>
-              </div>
-            </div>
+           <ExerciseCard
+           key={exercise.id}
+           id={exercise.id}
+           name={exercise.name}
+           bodyPart={exercise.bodyPart}
+           type={exercise.type}
+           image={exercise.image}
+         />
+         
           ))}
         </div>
 

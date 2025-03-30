@@ -9,6 +9,8 @@ import Dashboard from './pages/Dashboard';
 import Videos from './pages/Videos';
 import ExerciseSearch from './pages/ExerciseSearch';
 import Contact from './pages/Contact';
+import ExerciseDetail from './pages/ExerciseDetail';
+import Profile from './pages/Profile';
 
 const routes = [
   { path: '/', element: <Home />, isPrivate: false },
@@ -20,7 +22,11 @@ const routes = [
   { path: '/dashboard', element: <Dashboard />, isPrivate: false }, // Cambia a true si es privado
   { path: '/videos', element: <Videos />, isPrivate: false }, // Cambia a true si es privado
   { path: '/exercises', element: <ExerciseSearch />, isPrivate: false },
+  { path: '/exercise/:id', element: <ExerciseDetail />, isPrivate: false }, // Detalle de ejercicios
+
   { path: '/contact', element: <Contact />, isPrivate: false },
+  { path: '/profile', element: <Profile />, isPrivate: false }, // Cambia a true si es privado
+
 ];
 
 export default routes;
