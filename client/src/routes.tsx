@@ -17,8 +17,8 @@ const routes = [
   { path: '/blog/:id', element: <BlogDetail />, isPrivate: false },
   { path: '/login', element: <Login />, isPrivate: false },
   { path: '/register', element: <Register />, isPrivate: false },
-  { path: '/dashboard', element: <Dashboard />, isPrivate: true },
-  { path: '/videos', element: <Videos />, isPrivate: true },
+  { path: '/dashboard', element: <Dashboard />, isPrivate: false }, // Cambia a true si es privado
+  { path: '/videos', element: <Videos />, isPrivate: false }, // Cambia a true si es privado
   { path: '/exercises', element: <ExerciseSearch />, isPrivate: false },
   { path: '/contact', element: <Contact />, isPrivate: false },
 ];
