@@ -26,7 +26,7 @@ export default function Register() {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100">
+    <div className="flex justify-center items-center min-h-screen bg-gradient-to-b from-cyan-50 via-white to-cyan-100">
       <form onSubmit={handleSubmit} className="bg-white p-6 rounded-xl shadow-md w-full max-w-md space-y-4">
         <h2 className="text-2xl font-semibold text-center">Crear cuenta</h2>
         <div>

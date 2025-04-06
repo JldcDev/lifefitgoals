@@ -4,7 +4,8 @@ import NavDropdown from "./NavDropdown";
 
 export default function Navbar() {
   return (
-    <nav className="bg-black text-white py-3 px-6 md:px-12 shadow-sm">
+    <nav className="bg-gradient-to-r from-cyan-500 via-cyan-400 to-cyan-200 text-white  font-medium tracking-wide hover:text-gray-900 py-3 px-6 md:px-12 shadow-sm ">
+     
       <div className="w-full flex justify-between items-center">
         {/* Grupo: Logo + Enlaces */}
         <div className="flex items-center gap-x-10">
@@ -14,7 +15,8 @@ export default function Navbar() {
           </Link>
 
           {/* Enlaces de navegación */}
-          <div className="hidden md:flex gap-x-6 text-sm tracking-wide uppercase items-center">
+
+          <div className="  hidden xl:flex gap-x-7 gap-y-7 text-lg tracking-wide  items-center">
             <NavDropdown
               title="Planes"
               items={[
@@ -23,20 +25,20 @@ export default function Navbar() {
                 { label: "Movilidad", to: "/plans#mobility" },
               ]}
             />
-             <NavDropdown
-            title="Ejercicios"
-            items={[
-              { label: 'Explorar', to: '/exercises' },
-              { label: 'Buscar', to: '/exercises#search' },
-            ]}
-          />
             <NavDropdown
-            title="Blog"
-            items={[
-              { label: 'Ver artículos', to: '/blog' },
-              { label: 'Favoritos', to: '/blog#fav' },
-            ]}
-          />
+              title="Ejercicios"
+              items={[
+                { label: "Explorar", to: "/exercises" },
+                { label: "Buscar", to: "/exercises#search" },
+              ]}
+            />
+            <NavDropdown
+              title="Blog"
+              items={[
+                { label: "Ver artículos", to: "/blog" },
+                { label: "Favoritos", to: "/blog#fav" },
+              ]}
+            />
             <NavDropdown
               title="Videos"
               items={[
@@ -46,27 +48,25 @@ export default function Navbar() {
               ]}
             />
 
-<NavDropdown
-            title="Contacto"
-            items={[
-              { label: 'Formulario', to: '/contact' },
-              { label: 'Soporte', to: '/support' },
-            ]}
-          />
+            <NavDropdown
+              title="Contacto"
+              items={[
+                { label: "Formulario", to: "/contact" },
+                { label: "Soporte", to: "/support" },
+              ]}
+            />
           </div>
         </div>
 
         {/* Botón Perfil */}
-        <div>
-          <Link to="/profile">
-            <Button
-              variant="secondary"
-              className="text-black bg-white hover:bg-gray-200 transition"
-            >
-              Perfil
-            </Button>
-          </Link>
-        </div>
+        <Link to="/profile">
+          <Button
+            variant="ghost"
+            className="text-gray-500 hover:text-cyan-500 focus:outline-none focus-visible:ring-1 focus-visible:ring-cyan-300 text-md"
+          >
+            Perfil
+          </Button>
+        </Link>
       </div>
     </nav>
   );

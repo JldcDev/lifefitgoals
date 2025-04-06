@@ -23,7 +23,7 @@ const blogPosts = [
 
 export default function Blog() {
   return (
-    <div className="min-h-screen bg-white px-6 py-10">
+    <div className="min-h-screen bg-gradient-to-b from-cyan-50 via-white to-cyan-100">
       <h1 className="text-3xl font-bold text-gray-900 mb-6">Blog y consejos</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
         {blogPosts.map((post) => (

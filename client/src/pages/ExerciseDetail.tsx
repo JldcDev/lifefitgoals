@@ -33,7 +33,7 @@ export default function ExerciseDetail() {
   }
 
   return (
-    <div className="min-h-screen bg-white px-6 py-10 flex justify-center">
+    <div className="min-h-screen bg-gradient-to-b from-cyan-50 via-white to-cyan-100">
       <div className="w-full max-w-3xl bg-gray-50 p-8 rounded-xl shadow-md">
         <h1 className="text-3xl font-bold text-gray-900 mb-4">{exercise.name}</h1>
         <img src={exercise.image} alt={exercise.name} className="w-full h-80 object-cover rounded-md mb-6" />

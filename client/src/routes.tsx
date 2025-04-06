@@ -10,7 +10,8 @@ import Videos from './pages/Videos';
 import ExerciseSearch from './pages/ExerciseSearch';
 import Contact from './pages/Contact';
 import ExerciseDetail from './pages/ExerciseDetail';
-import Profile from './pages/Profile';
+import Profile from './pages/ProfilePage';
+import EditProfilePage from "./pages/EditProfilePage";
 
 const routes = [
   { path: '/', element: <Home />, isPrivate: false },
@@ -26,7 +27,12 @@ const routes = [
 
   { path: '/contact', element: <Contact />, isPrivate: false },
   { path: '/profile', element: <Profile />, isPrivate: false }, // Cambia a true si es privado
-
+  { path: "/profile/edit", element: <EditProfilePage />, isPrivate: false }, // Cambia a true si es privado
 ];
+
+
+
+
+
 
 export default routes;

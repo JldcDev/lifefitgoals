@@ -43,7 +43,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-screen bg-white px-6 py-10 flex justify-center">
+    <div className="min-h-screen bg-gradient-to-b from-cyan-50 via-white to-cyan-100">
       <div className="w-full max-w-2xl bg-gray-50 p-8 rounded-xl shadow-md">
         <h1 className="text-3xl font-bold text-gray-900 mb-6 text-center">Contáctanos</h1>
         <form onSubmit={handleSubmit} className="space-y-6">

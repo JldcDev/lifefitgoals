@@ -22,7 +22,7 @@ export default function BlogDetail() {
   if (!post) return <div className="p-10 text-gray-500">Artículo no encontrado</div>;
 
   return (
-    <div className="min-h-screen bg-white px-6 py-10">
+    <div className="min-h-screen bg-gradient-to-b from-cyan-50 via-white to-cyan-100">
       <h1 className="text-3xl font-bold text-gray-900 mb-4">{post.title}</h1>
       <p className="text-gray-700 leading-relaxed">{post.content}</p>
     </div>

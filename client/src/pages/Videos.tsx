@@ -17,7 +17,7 @@ const videos = [
 
 export default function Videos() {
   return (
-    <div className="min-h-screen bg-gray-50 px-6 py-10">
+    <div className="min-h-screen bg-gradient-to-b from-cyan-50 via-white to-cyan-100">
       <div className="max-w-5xl mx-auto space-y-10">
         <h1 className="text-3xl font-bold text-gray-900">Tus videos de entrenamiento</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

@@ -23,7 +23,7 @@ export default function Dashboard() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gray-50 px-6 py-10">
+    <div className="min-h-screen bg-gradient-to-b from-cyan-50 via-white to-cyan-100">
       <div className="space-y-10">
         {/* Encabezado */}
         <header className="flex flex-col md:flex-row md:items-center md:justify-between">

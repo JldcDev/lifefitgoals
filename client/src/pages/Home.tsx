@@ -1,15 +1,13 @@
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white px-6 py-10">
+    <div className="min-h-screen bg-gradient-to-b from-cyan-50 via-white to-cyan-100">
       {/* Contenedor principal */}
       <div className="w-full">
-        <h1 className="text-4xl font-bold text-gray-900">Bienvenido a LifeFitGoals</h1>
-        <p className="text-lg text-gray-600 mt-2">
-          Transforma tu salud con entrenamiento funcional, rutinas guiadas y seguimiento personalizado.
-        </p>
+        <h1 className="text-4xl font-bold text-gray-900  px-100 mt-40">Bienvenido a LifeFitGoals</h1>
+       
 
         {/* Grid corregido */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 mt-10 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 mt-20 w-full">
           <div className="bg-gray-100 p-6 rounded-xl shadow hover:shadow-md transition h-full">
             <h2 className="text-xl font-semibold">Planes de entrenamiento</h2>
             <p className="text-sm text-gray-600 mt-2">Elige entre fuerza, cardio, HIIT y más.</p>
