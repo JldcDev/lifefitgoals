@@ -11,18 +11,12 @@ export default function NavDropdown({ title, items }: NavDropdownProps) {
   const [open, setOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
-  // Si alguna ruta del dropdown coincide con la actual, abrir el dropdown
+  // Cerrar el sidebar al cambiar de ruta
   useEffect(() => {
-    const currentPath = location.pathname;
-    const shouldOpen = items.some((item) =>
-      currentPath.startsWith(item.to.split("#")[0])
-    );
-    if (shouldOpen) {
-      setOpen(true);
-    }
-  }, [location.pathname, items]);
+    setOpen(false);
+  }, [location.pathname]);
 
-  // Cerrar el sidebar al hacer clic fuera de él o en un enlace
+  // Cerrar el sidebar al hacer clic fuera de él
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
@@ -51,7 +45,8 @@ export default function NavDropdown({ title, items }: NavDropdownProps) {
       </div>
 
       {open && (
-        <div className="fixed top-0 left-0 h-screen w-60 bg-gradient-to-b from-cyan-500 via-cyan-400 to-cyan-200 text-white shadow-lg flex flex-col gap-4 py-6 px-6 z-50 animate-slide-in">
+        <div className="fixed top-16 left-0 h-screen w-60 bg-gradient-to-b from-transparent to-transparent text-white flex flex-col gap-6 rounded-md shadow-lg  py-8 px-15 z-20 animate-slide-in backdrop-blur-sm">
+          {/* Ajuste de posición con `top-16` para que las letras aparezcan más abajo del Navbar */}
           <span className="text-xl font-bold mb-4">{title}</span>
           {items.map((item) => {
             const isActive = location.pathname === item.to.split("#")[0];

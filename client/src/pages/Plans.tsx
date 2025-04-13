@@ -23,8 +23,8 @@ const plans = [
 
 export default function Plans() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-cyan-50 via-white to-cyan-100">
-      <div className="w-full max-w-7xl">
+    <div className="min-h-screen bg-gradient-to-b from-cyan-50 via-white to-cyan-100 flex justify-center items-center">
+      <div className="w-full max-w-7xl px-4">
         <h1 className="text-4xl font-bold text-gray-900 mb-10 text-center">
           Planes de entrenamiento
         </h1>

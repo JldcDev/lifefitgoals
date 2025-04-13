@@ -42,8 +42,8 @@ export default function ExerciseSearch() {
   });
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-cyan-50 via-white to-cyan-100">
-      <div className="w-full max-w-7xl">
+    <div className="min-h-screen bg-gradient-to-b from-cyan-50 via-white to-cyan-100 flex justify-center items-center">
+      <div className="w-full max-w-7xl px-4">
         <h1 className="text-4xl font-bold text-gray-900 mb-6 text-center">Explora Ejercicios</h1>
 
         {/* 🔍 Búsqueda y filtros */}
@@ -80,17 +80,17 @@ export default function ExerciseSearch() {
         </div>
 
         {/* 💪 Resultados */}
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 justify-items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-20">
+
           {filteredExercises.map((exercise) => (
-           <ExerciseCard
-           key={exercise.id}
-           id={exercise.id}
-           name={exercise.name}
-           bodyPart={exercise.bodyPart}
-           type={exercise.type}
-           image={exercise.image}
-         />
-         
+            <ExerciseCard
+              key={exercise.id}
+              id={exercise.id}
+              name={exercise.name}
+              bodyPart={exercise.bodyPart}
+              type={exercise.type}
+              image={exercise.image}
+            />
           ))}
         </div>
 
